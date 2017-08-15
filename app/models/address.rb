@@ -6,4 +6,7 @@ class Address < ApplicationRecord
     "hai al janobi", "Al-Rabia", "Al Huson", "Al Balad", "Hay Al Tuloul", "Hay Al Gharby", "Hay Al Sharqi", "Hay Al Sheikh Khalil", "Hawara", "Beit Ras", "Hay Al Jamaa", "Hay Al Asilah", "Hay Al Abrar",
     "Um Al Qura", "Hay Al Fadilah", "Hay Al Dobat", "Hay Al Ward", "Dahyat Al Hussein", "Hay Aliyah"] }
   validates :road_name, presence: true
+
+  belongs_to :user
+  has_many :orders, dependent: :nullify
 end
