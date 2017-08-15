@@ -1,0 +1,5 @@
+<%= image_tag @item.photo.url(:standard) if @item.photo.present? %>
+<%= @item.description %><br>
+
+<%= link_to "Delete", item_path(@item), method: :delete %><br>
+<%= link_to "Edit", edit_item_path(@item) %>

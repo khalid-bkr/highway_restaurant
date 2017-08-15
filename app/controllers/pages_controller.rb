@@ -3,4 +3,8 @@ class PagesController < ApplicationController
 
   def home
   end
+
+  def edit_menu
+    @items = Item.all
+  end
 end
