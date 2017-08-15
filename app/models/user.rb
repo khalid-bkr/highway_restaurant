@@ -6,5 +6,5 @@ class User < ApplicationRecord
 
   validates :first_name, presence: true
   validates :last_name, presence: true
-  validates_format_of :phone_number, :with => /[0]{0,1}[7]{1}[7-9]{1}[0-9]{7}$/
+  validates_format_of :phone_number, :with => /\A[0]{0,1}[7]{1}[7-9]{1}[0-9]{7}$\Z/
 end
