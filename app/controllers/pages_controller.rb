@@ -4,6 +4,7 @@ class PagesController < ApplicationController
   def home
   end
 
+
   def dashboard
     redirect_to root_path unless current_user.admin?
   end
@@ -39,4 +40,8 @@ class PagesController < ApplicationController
     @delivered_orders = Order.where(status: 3) || []
   end
 
+
+  def edit_menu
+    @items = Item.all
+  end
 end

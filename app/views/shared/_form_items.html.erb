@@ -1,0 +1,4 @@
+<%= form_tag items_path, method: :get do %>
+  <%= select_tag :category, options_for_select(Item::categories, params[:category]), include_blank: true %>
+  <%= submit_tag "search" %>
+<% end %>
