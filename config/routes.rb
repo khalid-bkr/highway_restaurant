@@ -5,9 +5,9 @@ Rails.application.routes.draw do
 
 
   resources :orders
-  
+  resources :addresses, except: [:show]
   resources :items, only: [:index, :new, :edit, :create, :update, :show]
-  
+
   resources :pages , only: [] do
     collection do
       get :home, :menu, :dashboard, :edit_menu, :manager_orders

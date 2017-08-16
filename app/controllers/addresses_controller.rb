@@ -13,7 +13,7 @@ class AddressesController < ApplicationController
   def create
     @address = current_user.addresses.new(address_params)
     if @address.save
-      redirect_to orders_path
+      redirect_back(fallback_location: root_path)
     else
       render 'new'
     end
