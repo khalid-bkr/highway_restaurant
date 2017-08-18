@@ -1,0 +1,76 @@
+.login-form-wrapper {
+  background-color: white;
+  padding: 20px;
+  margin-top: 50px;
+  border-radius: 5px;
+  box-shadow: 2px 2px 2px rgba(0,0,0,0.3);
+
+  h2 {
+    color: #777777;
+    margin-bottom: 20px;
+  }
+}
+
+.or-line-login {
+  overflow: visible;
+  border-bottom: 1px solid #dddddd;
+  text-align: center;
+  height: 15px;
+  margin-bottom: 35px;
+  margin-top: 15px;
+}
+
+.or-line-login span {
+  line-height: 100%;
+  color: #A1A1A1;
+  background-color: #fff;
+  font-size: 18px;
+  text-transform: lowercase;
+  padding: 0 10px;
+}
+
+.submit-btn{
+  width: 100%;
+  margin-bottom: 10px;
+}
+
+.forgot-btn{
+  font-size: 16px;
+
+  &:hover {
+    text-decoration: none;
+    color: blue;
+  }
+}
+
+.sign-up-btns {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+}
+
+.sign-up-btn{
+  flex: 0 1 auto;
+  width: 46%;
+}
+
+.fb-login-btn{
+  flex: 0 1 auto;
+  width: 210px;
+  font-size: 16px;
+  background-color: #1362EB;
+  color: white;
+  border-radius: 3px;
+  padding: 5px 10px;
+  height: 36px;
+  box-shadow: 1px 1px 1px rgba(0,0,0,0.2);
+
+  &:hover {
+    background-color: #195CD1;
+    text-decoration: none;
+  }
+}
+
+.fb-login-no-hover:hover{
+  text-decoration:none;
+}
