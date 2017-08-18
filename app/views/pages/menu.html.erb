@@ -28,10 +28,10 @@
 
   <div class="menu-items">
 
-    <div class="container">
-      <div class="row">
+      <div class="menu-items-container">
+
         <% @items.each do |item| %>
-          <div class="col-sm-4">
+
             <div class="white-menu-item-wrapper">
               <%= image_tag item.photo, class: "menu-item-image" %>
               <h4 class="menu-item-name"><%= item.name %></h4>
@@ -40,10 +40,9 @@
                 <i class="fa fa-shopping-cart" aria-hidden="true"></i>
               <% end %>
             </div>
-          </div>
+
         <% end %>
       </div>
-    </div>
 
   </div>
 

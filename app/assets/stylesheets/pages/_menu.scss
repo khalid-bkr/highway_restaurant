@@ -78,9 +78,18 @@
 
 }
 
+.menu-items-container{
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  -webkit-flex-wrap: wrap;
+
+}
 
 .white-menu-item-wrapper {
+  width: 48%;
   margin-top: 20px;
+  margin-left: 1%;
   background-color:white;
   position: relative;
   height: 300px;
