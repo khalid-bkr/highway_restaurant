@@ -1,0 +1,43 @@
+<div class="wrapper-page-addresses">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12">
+        <h2>Address book:</h2>
+        <div class="wrapper-addresses">
+          <table>
+            <% @addresses.each_with_index do |address, index| %>
+            <tr>
+              <td width="40%">
+                  <%= "#{(index + 1)} - City: #{address.city}, Area: #{address.area}, Rd: #{address.road_name}, Level: #{address.floor}" %>
+              </td>
+              <td width="5%">
+                <%= link_to edit_address_path(address) do %>
+                  <i class="fa fa-pencil" aria-hidden="true"></i>
+                <% end %>
+              </td>
+              <td width="5%">
+                <%= link_to address_path(address), method: :delete, data: {confirm: "Are you sure?"} do %>
+                  <i class="fa fa-trash" aria-hidden="true"></i>
+                <% end %>
+              </td>
+            </tr>
+            <% end %>
+          </table>
+        </div>
+          <%= link_to "ADD NEW ADDRESS", new_address_path, class:"address-add btn btn-primary" %>
+          <%= link_to "PLACE ORDER", new_order_path, class:"order-add btn btn-primary" %>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<!-- <table>
+  <tr>
+    <td>
+
+    </td>
+  </tr>
+</table>
+
+ -->
