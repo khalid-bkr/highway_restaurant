@@ -1,0 +1,174 @@
+.menu-page-container {
+  display: flex;
+  width: 100vw;
+}
+
+.category-picker {
+  flex: 0 1 auto;
+  width: 20%;
+  height: 100vh;
+  position: sticky !important;
+  top: 0 !important;
+
+  ul {
+    list-style: none;
+    margin-top: 20px;
+    padding-left: 0;
+
+    li {
+      padding-left: 30%;
+
+      a {
+        color: #787878;
+
+        &:hover {
+          color: #da552f;
+          text-decoration: none;
+        }
+
+        &.active {
+          color: #da552f;
+        }
+      }
+    }
+  }
+}
+
+
+.menu-items {
+  flex: 0 1 auto;
+  width: 60%;
+}
+
+.cart-part {
+  flex: 0 1 auto;
+  height: 100vh;
+  position: sticky !important;
+  top: 0 !important;
+  width: 20%;
+  margin-top: 20px;
+  margin-right: 20px;
+  padding: 0 20px;
+  border-radius: 4px;
+  background-color: white;
+  box-shadow: 2px 2px 2px rgba(0,0,0,0.2);
+
+  h3 {
+    font-size: 24px;
+  }
+
+  table {
+    width: 100%;
+  }
+
+  table > tr > td {
+    margin: 10px auto;
+
+  }
+
+  i {
+    font-size: 12px;
+    color: #787878;
+    padding-bottom: 4px;
+
+    &:hover {
+      color: #da552f;
+    }
+  }
+
+}
+
+.menu-items-container{
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.white-menu-item-wrapper {
+  width: 48%;
+  margin-top: 20px;
+  margin-left: 1%;
+  background-color:white;
+  position: relative;
+  height: 300px;
+  border-radius: 4px;
+  box-shadow: 2px 2px 2px rgba(0,0,0,0.1);
+}
+
+
+.menu-item-image {
+  width: 90%;
+  height: 70%;
+  position: absolute;
+  top: 5%;
+  left: 5%;
+  border-radius: 4px;
+}
+
+.menu-item-name {
+  position: absolute;
+  font-size: 16px;
+  color: #4F4F4F;
+  bottom: 8%;
+  left: 5%;
+}
+
+.menu-item-price {
+  position: absolute;
+  font-size: 16px;
+  bottom: 2%;
+  right: 15%;
+}
+
+.menu-item-cart {
+  position: absolute;
+  font-size: 28px;
+  color: #13CD79;
+  bottom: 2%;
+  right: 5%;
+
+  &:hover {
+    color: #0C844D;
+  }
+}
+
+
+
+
+
+
+
+
+
+.i-tag {
+  padding-bottom: 5px;
+}
+
+.menu-btns{
+  margin-top: 30px;
+}
+
+.btn-proceed {
+  font-size: 16px;
+  color: white;
+  padding: 8px 18px;
+  border-radius: 10px;
+  background-color: #13CD79;
+  margin-right: 5px;
+  &:hover {
+    text-decoration: none;
+    color: white;
+    background-color: #0C844D;
+
+  }
+}
+
+.btn-clear-cart {
+  font-size: 16px;
+  color: #787878;
+
+  &:hover {
+    text-decoration: none;
+    color: #da552f;
+  }
+}

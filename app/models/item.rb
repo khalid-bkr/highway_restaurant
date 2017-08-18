@@ -8,8 +8,9 @@ class Item < ApplicationRecord
   enum category: {
     meals: 0,
     burgers: 1,
-    sides: 2,
-    drinks: 3
+    sandwiches: 2,
+    sides: 3,
+    drinks: 4
   }
 
 end

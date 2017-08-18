@@ -14,7 +14,10 @@ class OrdersController < ApplicationController
 
   def create
     @order = Order.new(order_params)
+    @order.user = current_user
     session[:items_ids].each { |item| @order.items << Item.find(item) }
+    @order.bill = @order.items.to_a.pluck(:price).inject(:+)
+
 
     if @order.save
       session[:items_ids] = nil

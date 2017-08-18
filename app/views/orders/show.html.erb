@@ -3,24 +3,30 @@
   <h2 class="text-center">Thank You for Your Order</h2>
   <p class="text-center">We appreciate your business!</p>
     <div class="col-xs-12 col-md-offset-3 col-md-6">
-      <div></div>
+
       <h4><b>Address : </b></h4>
-        <ol>
-        <li><%= "#{@order.address.state}, #{@order.address.city}, #{@order.address.street}, #{@order.address.apartment}" %>
+      <ul>
+        <li><%= "#{@order.address.city}, #{@order.address.area}, #{@order.address.road_name}" %>
         </li>
-        </ol>
+      </ul>
+
+      <hr>
+
       <h4><b>Items :</b></h4>
-      <ol>
+      <ul>
         <% @order.items.each do |item| %>
-          <li><%= "#{item.name}" %>&nbsp; <%=item.price %>JD</li>
+          <li><%= "#{item.name}" %>&nbsp; <%=item.price.to_f / 100 %>&nbsp;&nbsp;JD</li>
         <% end %>
-      </ol>
+      </ul>
+
+      <hr>
+
       <h4><b>Total : </b></h4>
-      <ol>
+      <ul>
         <li>
-          <%= "#{@order.bill} JD" %>
+          <%= "#{@order.bill.to_f / 100}" %>&nbsp;&nbsp;JD
         </li>
-      </ol>
+      </ul>
       <%= link_to "Back", orders_path, class: "btn btn-danger" %>
     </div>
   </div>

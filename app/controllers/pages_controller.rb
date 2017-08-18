@@ -13,7 +13,7 @@ class PagesController < ApplicationController
     if params[:category].present?
       @items = Item.where(category: params[:category])
     else
-      @items = Item.all
+      @items = Item.where(category: 0)
     end
 
     @items_list = {}
