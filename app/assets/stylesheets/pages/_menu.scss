@@ -93,7 +93,7 @@
   width: 90%;
   height: 70%;
   position: absolute;
-  top: 10px;
+  top: 5%;
   left: 5%;
   border-radius: 4px;
 }
@@ -102,21 +102,22 @@
   position: absolute;
   font-size: 16px;
   color: #4F4F4F;
-  bottom: 17px;
+  bottom: 8%;
   left: 5%;
 }
 
 .menu-item-price {
   position: absolute;
   font-size: 16px;
-  bottom: 20px;
-  right: 5%;
+  bottom: 2%;
+  right: 15%;
 }
 
 .menu-item-cart {
   position: absolute;
+  font-size: 28px;
   color: #13CD79;
-  bottom: 7px;
+  bottom: 2%;
   right: 5%;
 
   &:hover {
