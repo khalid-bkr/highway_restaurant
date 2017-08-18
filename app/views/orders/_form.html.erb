@@ -1,5 +1,5 @@
 <%= simple_form_for @order do |f| %>
   <%= f.association :address, collection: current_user.addresses, label_method: :road_name, value_method: :id %>
   <%= f.input :notes %>
-  <%= f.submit class:"btn btn-success"%>
+  <%= f.submit class:"btn btn-success submit-order-btn"%>
 <% end %>
