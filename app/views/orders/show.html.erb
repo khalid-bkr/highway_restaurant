@@ -1,33 +1,34 @@
 <div class="container">
   <div class="row">
-  <h2 class="text-center">Thank You for Your Order</h2>
-  <p class="text-center">We appreciate your business!</p>
+    <h2 class="text-center">Thank You for Your Order</h2>
+    <p class="text-center">We appreciate your business!</p>
     <div class="col-xs-12 col-md-offset-3 col-md-6">
+      <div class="order-show-wrapper">
+        <h4><b>Address</b></h4>
+        <ul>
+          <li><%= "#{@order.address.city}, #{@order.address.area}, #{@order.address.road_name}" %>
+          </li>
+        </ul>
 
-      <h4><b>Address : </b></h4>
-      <ul>
-        <li><%= "#{@order.address.city}, #{@order.address.area}, #{@order.address.road_name}" %>
-        </li>
-      </ul>
+        <hr>
 
-      <hr>
+        <h4><b>Items</b></h4>
+        <ul>
+          <% @order.items.each do |item| %>
+            <li><%= "#{item.name}" %>&nbsp;&nbsp;<%=item.price.to_f / 100 %>&nbsp;&nbsp;JD</li>
+          <% end %>
+        </ul>
 
-      <h4><b>Items :</b></h4>
-      <ul>
-        <% @order.items.each do |item| %>
-          <li><%= "#{item.name}" %>&nbsp; <%=item.price.to_f / 100 %>&nbsp;&nbsp;JD</li>
-        <% end %>
-      </ul>
+        <hr>
 
-      <hr>
-
-      <h4><b>Total : </b></h4>
-      <ul>
-        <li>
-          <%= "#{@order.bill.to_f / 100}" %>&nbsp;&nbsp;JD
-        </li>
-      </ul>
-      <%= link_to "Back", orders_path, class: "btn btn-danger" %>
+        <h4><b>Total</b></h4>
+        <ul>
+          <li class="final-bill">
+            <%= "#{@order.bill.to_f / 100}" %>&nbsp;&nbsp;JD
+          </li>
+        </ul>
+        <%= link_to "Back", orders_path, class: "btn btn-primary back-order-show-btn" %>
+      </div>
     </div>
   </div>
 </div>
