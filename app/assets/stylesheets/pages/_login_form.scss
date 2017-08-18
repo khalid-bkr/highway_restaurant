@@ -54,15 +54,18 @@
   width: 46%;
 }
 
-.fb-login-btn{
+.fb-div{
   flex: 0 1 auto;
-  width: 210px;
+  width: 46%;
+}
+
+.fb-login-btn{
   font-size: 16px;
   background-color: #1362EB;
   color: white;
   border-radius: 3px;
   padding: 5px 10px;
-  height: 36px;
+  min-height: 36px;
   box-shadow: 1px 1px 1px rgba(0,0,0,0.2);
 
   &:hover {

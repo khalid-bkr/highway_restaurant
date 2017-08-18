@@ -30,12 +30,13 @@
 
         <div class="sign-up-btns">
           <%= link_to "Log in", new_session_path(resource_name), class: 'btn btn-primary sign-up-btn' %>
-
-          <%= link_to user_facebook_omniauth_authorize_path ,class: "fb-login-no-hover" do %>
-            <div class="fb-login-btn">
-              <i class="fa fa-facebook"></i>&nbsp; Sign in with Facebook
-            </div>
-          <% end %>
+          <div class="fb-div">
+            <%= link_to user_facebook_omniauth_authorize_path ,class: "fb-login-no-hover" do %>
+              <div class="fb-login-btn">
+                <i class="fa fa-facebook"></i>&nbsp; Sign in with Facebook
+              </div>
+            <% end %>
+          </div>
         </div>
       </div>
     </div>
