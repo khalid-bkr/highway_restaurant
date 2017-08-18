@@ -1,8 +1,3 @@
-#map {
-
-  height:200px;
-
-}
 .contact{
   float:left;
   color:#fff;
@@ -13,7 +8,7 @@
 .container-body{
   background-color: #77000D;
 }
-#footer h3{
+#footer h4{
   color: #fff;
 }
 #footer {
@@ -22,7 +17,7 @@
   padding-bottom: 40px;
 }
 
-.menu-item a:hover {
+.menu-item a:hover, a:active, a:visited, a:focus {
   text-decoration: none;
 }
 
