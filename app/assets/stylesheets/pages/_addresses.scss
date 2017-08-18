@@ -1,0 +1,24 @@
+.wrapper-addresses {
+  background-color: white;
+  padding: 20px;
+  margin-top: 40px;
+  border-radius: 10px;
+  box-shadow: 2px 2px 2px rgba(0,0,0,0.3);
+  // position: absolute;
+}
+
+.wrapper-page-addresses {
+  position: relative;
+}
+
+.address-add {
+  margin-top: 10px;
+  position: absolute;
+  right: 15px;
+}
+
+.order-add {
+  margin-top: 10px;
+  position: absolute;
+  right: 230px;
+}
