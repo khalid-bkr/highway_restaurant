@@ -1,0 +1,66 @@
+<div id="footer">
+  <div class="container">
+    <div class="row">
+    <div class="col-xs-3">
+      <h3 class="list-group-title">Follow us</h3>
+      <ul class="list-unstyled">
+        <li class="menu-item">
+         <%= link_to "#" do %>
+            <i class="fa fa-facebook" aria-hidden="true"></i> Facebook
+          <% end %>
+        </li>
+        <li class="menu-item">
+        <%= link_to "#" do %>
+          <i class="fa fa-instagram" aria-hidden="true"></i> Instagram
+        <% end %>
+        </li>
+      </ul>
+    </div>
+
+     <div class="col-xs-3">
+      <h3 class="list-group-title">Contact us</h3>
+      <ul class="list-unstyled">
+        <li class="menu-item">jbjbmb</li>
+        <li class="menu-item">jgghgh</li>
+      </ul>
+    </div>
+
+     <div class="col-xs-3">
+      <h3 class="list-group-title">Contact us</h3>
+      <ul class="list-unstyled">
+        <li class="menu-item">jhknjk</li>
+        <li class="menu-item">ghjhghjg</li>
+      </ul>
+    </div>
+
+    <!-- <div class="contact hidden-xs hidden-sm  col-md-3">
+      <h3>Contact Us</h3>
+      <p>your-food@delivery.com</p><br>
+      <p>(215)-828-2323</p>
+   </div>
+    <div class="location hidden-xs hidden-sm col-md-3 col-md-offset-5">
+      <h3>Our Locations</h3>
+      <div id="map" style="width: 400px;">
+        <%# content_for(:after_js) do %>
+          <%#= javascript_tag do %>
+            $(document).ready(function() {
+              var handler = Gmaps.build('Google');
+              handler.buildMap({ internal: { id: 'map' } }, function() {
+                markers = handler.addMarkers(<%#= raw @hash.to_json %>);
+                handler.bounds.extendWith(markers);
+                handler.fitMapToBounds();
+                if (markers.length == 0) {
+                  handler.getMap().setZoom(2);
+                } else if (markers.length == 1) {
+                  handler.getMap().setZoom(14);
+                }
+              });
+            });
+          <%# end %>
+          <%# end %>
+          </div>
+        </div> -->
+
+      </div>
+    </div>
+  </div>
