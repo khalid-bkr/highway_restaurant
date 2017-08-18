@@ -10,7 +10,7 @@
     <% if user_signed_in? %>
 
       <!-- Links when logged in -->
-      <%= link_to "Menu", "#", class: "navbar-wagon-item navbar-wagon-link" %>
+      <%= link_to "Menu", menu_pages_path, class: "navbar-wagon-item navbar-wagon-link" %>
       <%= link_to "Orders", orders_path, class: "navbar-wagon-item navbar-wagon-link" %>
       <%= link_to "Admin", admin_root_path, class: "navbar-wagon-item navbar-wagon-link" if current_user.admin? %>
 
