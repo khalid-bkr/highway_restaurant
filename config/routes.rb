@@ -13,11 +13,19 @@ Rails.application.routes.draw do
 
   resources :addresses, except: [:show]
 
-  resources :items, only: [:index, :new, :edit, :create, :update, :show]
+  resources :items
 
   resources :pages , only: [] do
     collection do
       get :home, :menu, :dashboard, :edit_menu, :manager_orders
     end
   end
+
+
+
+
+
+  post "/cart", to: "orders#add_cart"
+  post "/remove_item", to: "orders#remove_cart"
+  put "/clear_cart", to: "orders#clear_cart"
 end

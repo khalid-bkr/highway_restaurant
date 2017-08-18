@@ -1,0 +1,94 @@
+<div class="menu-page-container">
+
+  <div class="category-picker">
+
+    <ul id="list-home-page">
+      <li>
+        <%= link_to "Meals", menu_pages_path(category: "meals"), class:"category-links" %>
+      </li>
+      <hr>
+      <li>
+        <%= link_to "Burgers", menu_pages_path(category: "burgers"), class:"category-links" %>
+      </li>
+      <hr>
+      <li>
+        <%= link_to "Sandwiches", menu_pages_path(category: "sandwiches"), class:"category-links" %>
+      </li>
+      <hr>
+      <li>
+        <%= link_to "Sides", menu_pages_path(category: "sides"), class:"category-links" %>
+      </li>
+      <hr>
+      <li>
+        <%= link_to "Drinks", menu_pages_path(category: "drinks"), class:"category-links" %>
+      </li>
+    </ul>
+
+  </div>
+
+  <div class="menu-items">
+
+      <div class="menu-items-container">
+
+        <% @items.each do |item| %>
+
+            <div class="white-menu-item-wrapper">
+              <%= image_tag item.photo, class: "menu-item-image" %>
+              <h4 class="menu-item-name"><%= item.name %></h4>
+              <h4 class="menu-item-price text-center"><%= item.price.to_f / 100 %> JD </h4>
+              <%= link_to cart_path(item_id: item.id, category: params[:category]), class:"menu-item-cart", method: :post do %>
+                <i class="fa fa-shopping-cart" aria-hidden="true"></i>
+              <% end %>
+            </div>
+
+        <% end %>
+      </div>
+
+  </div>
+
+  <div class="cart-part">
+
+    <h3 class="text-center">Ordering List</h3>
+
+    <table>
+      <tr>
+        <td><h6><small>amount&nbsp;&nbsp;</small></h6></td>
+        <td><h6><small>item&nbsp;&nbsp;</small></h6></td>
+        <td><h6><small>price</small></h6></td>
+      </tr>
+      <% @items_list.each do |item| %>
+        <tr>
+          <td><%= item[1][:count] %>&nbsp;&nbsp;</td>
+          <td><%= item.first %>&nbsp;&nbsp;</td>
+          <td><%= item[1][:price].to_f / 100 %>&nbsp;&nbsp;</td>
+          <td>
+            <div class="i-tag">
+              <%= link_to remove_item_path(item_id: item[1][:id], category: params[:category]), method: :post do %>
+                <i class="fa fa-minus-circle" aria-hidden="true"></i>
+              <% end %>
+            </div>
+          </td>
+        </tr>
+      <% end %>
+    </table>
+
+    <br/>
+    <% unless session[:items_ids].nil? || session[:items_ids].empty? %>
+      <hr>
+      <h3 class="text-center">Total   :&nbsp;&nbsp; <%= @bill.to_f / 100 %> JD</h3>
+        <div class="menu-btns text-center">
+          <% if current_user %>
+            <%= link_to "Proceed", new_order_path(current_user), class: "btn-proceed" %>
+          <% else  %>
+            <%= link_to "Proceed", new_user_session_path, class: "btn-proceed" %>
+          <% end %>
+
+
+          <%= link_to "Clear Cart", clear_cart_path(category: params[:category]), method: :put, class: "btn-clear-cart"   %>
+        </div>
+
+    <% end %>
+
+  </div>
+
+</div>
