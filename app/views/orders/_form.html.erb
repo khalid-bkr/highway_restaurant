@@ -1,5 +1,10 @@
 <%= simple_form_for @order do |f| %>
+  <%= f.simple_fields_for current_user do |u| %>
+      <%= u.input :phone_number %>
+  <% end %>
   <%= f.association :address, collection: current_user.addresses, label_method: :road_name, value_method: :id %>
   <%= f.input :notes %>
   <%= f.submit class:"btn btn-success submit-order-btn"%>
 <% end %>
+
+
