@@ -44,4 +44,7 @@ class PagesController < ApplicationController
   def edit_menu
     @items = Item.all
   end
+
+  def contact_us
+  end
 end
