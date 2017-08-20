@@ -23,7 +23,6 @@ ActiveAdmin.register User do
     column :first_name
     column :last_name
     column :email
-    column :name
     column :created_at
     column :admin
     actions
