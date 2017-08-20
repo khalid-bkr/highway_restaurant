@@ -17,4 +17,23 @@ ActiveAdmin.register Order do
   permit_params :notes, :status, :bill
 end
 
+ActiveAdmin.register Order do
+  index do
+    selectable_column
+    column :id
+    column :user
+    column "address" do |order|
+      order.address.area
+    end
+    column :notes
+    column :status
+    column :bill
+    column "phone_number" do |order|
+      order.user.phone_number
+    end
+    column :created_at
+    actions
+  end
+end
+
 end
