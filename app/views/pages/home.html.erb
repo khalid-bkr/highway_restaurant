@@ -21,34 +21,50 @@
       <ul class="slides">
 
         <li>
-          <img src="https://lorempixel.com/580/250/nature/1">
-          <div class="caption center-align">
-            <h3>This is our big Tagline!</h3>
-            <h5 class="light grey-text text-lighten-3">Here's our small slogan.</h5>
-          </div>
-        </li>
-
-        <li>
-          <img src="https://lorempixel.com/580/250/nature/2">
+          <%= image_tag "main-banner.jpg" %>
           <div class="caption left-align">
-            <h3>Left Aligned Caption</h3>
-            <h5 class="light grey-text text-lighten-3">Here's our small slogan.</h5>
+            <h3 class="hidden-xs">Highway Restaurant</h3>
+            <h3 class="hidden-xs"> & Cafe</h3>
+            <h3 class="hidden-sm hidden-md hidden-lg">Highway Restaurant & Cafe</h3>
+            <h5 class="light grey-text text-lighten-3">
+              check out our <%= link_to "menu", menu_pages_path, class:"menu-btn" %> !
+            </h5>
           </div>
         </li>
 
         <li>
-          <img src="https://lorempixel.com/580/250/nature/3">
+          <%= image_tag "banner-left-text.jpg" %>
+          <div class="caption left-align">
+            <h3 class="hidden-xs">Have You Tried</h3>
+            <h3 class="hidden-xs">Our Pizza?</h3>
+            <h3 class="hidden-sm hidden-md hidden-lg">Have You Tried Our Pizza?</h3>
+            <h5 class="light grey-text text-lighten-3">
+              check out our <%= link_to "menu", menu_pages_path, class:"menu-btn" %> !
+            </h5>
+          </div>
+        </li>
+
+        <li>
+          <%= image_tag "banner-right-text.jpg" %>
           <div class="caption right-align">
-            <h3>Right Aligned Caption</h3>
-            <h5 class="light grey-text text-lighten-3">Here's our small slogan.</h5>
+            <h3 class="hidden-xs">Have You Tried</h3>
+            <h3 class="hidden-xs">Our Burgers?</h3>
+            <h3 class="hidden-sm hidden-md hidden-lg">Have You Tried Our Burgers?</h3>
+            <h5 class="light grey-text text-lighten-3">
+              check out our <%= link_to "menu", menu_pages_path, class:"menu-btn" %> !
+            </h5>
           </div>
         </li>
 
         <li>
-          <img src="https://lorempixel.com/580/250/nature/4">
-          <div class="caption center-align">
-            <h3>This is our big Tagline!</h3>
-            <h5 class="light grey-text text-lighten-3">Here's our small slogan.</h5>
+          <%= image_tag "banner-left-text-2.jpg" %>
+          <div class="caption left-align">
+            <h3 class="hidden-xs">Have You Tried</h3>
+            <h3 class="hidden-xs">Our Fries?</h3>
+            <h3 class="hidden-sm hidden-md hidden-lg">Have You Tried Our Fries?</h3>
+            <h5 class="light grey-text text-lighten-3">
+              check out our <%= link_to "menu", menu_pages_path, class:"menu-btn" %> !
+            </h5>
           </div>
         </li>
 

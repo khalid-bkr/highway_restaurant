@@ -1,1 +1,14 @@
 // Specific CSS for your home-page
+.menu-btn {
+  color: white;
+  padding: 3px 7px;
+  background-color: #da552f;
+  border: 2px solid #DE6745;
+  border-radius: 5px;
+  &:hover {
+    color: white;
+    background-color: transparent;
+    border: 2px solid #da552f;
+    text-decoration: none;
+  }
+}
