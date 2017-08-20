@@ -16,4 +16,17 @@ ActiveAdmin.register Item do
   permit_params :name, :price, :description, :category
 end
 
+ActiveAdmin.register Item do
+  index do
+    selectable_column
+    column :id
+    column :name
+    column :price
+    column :description
+    column :category
+    column :created_at
+    actions
+  end
+end
+
 end
