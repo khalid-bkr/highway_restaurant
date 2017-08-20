@@ -9,8 +9,9 @@ class Item < ApplicationRecord
     meals: 0,
     burgers: 1,
     sandwiches: 2,
-    sides: 3,
-    drinks: 4
+    pizza: 3,
+    sides: 4,
+    drinks: 5
   }
 
 end
