@@ -2,13 +2,17 @@
 .menu-btn {
   color: white;
   padding: 3px 7px;
-  background-color: #da552f;
-  border: 2px solid #DE6745;
+  background-color: #c00917;
+  border: 2px solid #C21925;
   border-radius: 5px;
   &:hover {
     color: white;
     background-color: transparent;
-    border: 2px solid #da552f;
+    border: 2px solid #C21925;
     text-decoration: none;
   }
+}
+
+.mobile {
+  text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
 }
