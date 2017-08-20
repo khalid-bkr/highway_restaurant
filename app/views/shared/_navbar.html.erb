@@ -10,9 +10,15 @@
     <% if user_signed_in? %>
 
       <!-- Links when logged in -->
-      <%= link_to "Menu", menu_pages_path, class: "navbar-wagon-item navbar-wagon-link" %>
-      <%= link_to "Orders", orders_path, class: "navbar-wagon-item navbar-wagon-link" %>
-      <%= link_to "Admin", admin_root_path, class: "navbar-wagon-item navbar-wagon-link" if current_user.admin? %>
+      <%= link_to menu_pages_path, class: "navbar-wagon-item navbar-wagon-link" do %>
+        <i class="fa fa-cutlery" aria-hidden="true"></i> Menu
+      <% end %>
+      <%= link_to orders_path, class: "navbar-wagon-item navbar-wagon-link" do %>
+        <i class="fa fa-cart-arrow-down" aria-hidden="true"></i> Orders
+      <% end %>
+      <%= link_to admin_root_path, class: "navbar-wagon-item navbar-wagon-link" do %>
+        <i class="fa fa-unlock-alt" aria-hidden="true"></i> Admin
+      <% end if current_user.admin? %>
 
       <!-- Avatar with dropdown menu -->
       <div class="navbar-wagon-item">
