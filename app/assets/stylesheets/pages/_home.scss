@@ -1,1 +1,49 @@
 // Specific CSS for your home-page
+.menu-btn {
+  color: white;
+  padding: 3px 7px;
+  background-color: #c00917;
+  border: 2px solid #C21925;
+  border-radius: 5px;
+  &:hover {
+    color: white;
+    background-color: transparent;
+    border: 2px solid #C21925;
+    text-decoration: none;
+  }
+}
+
+.mobile {
+  text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+}
+
+.home-page-icon{
+  width: 25%;
+  height: 80px;
+}
+
+.home-page-icon-dots{
+  height: 110px;
+  margin: 5px 0;
+  width: 10%;
+}
+
+.home-icon-div {
+  height: 100px;
+  width:100%;
+  font-size: 22px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  small {
+    flex: 0 0 auto;
+  }
+  img {
+    flex: 0 0 auto;
+  }
+}
+
+.step-process{
+  letter-spacing: 1px;
+}
