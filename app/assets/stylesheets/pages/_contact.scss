@@ -8,17 +8,16 @@
   box-shadow: 2px 2px 2px rgba(0,0,0,0.3);
 
   ul{
-    width:100%;
-    margin-left: 15%;
-    margin-top: 10%;
-    margin-bottom: 10%;
     li {
-      padding-right: 40px;
+      padding-left: 10px;
       font-size: 20px;
     }
   }
 
-
+  hr {
+    margin-bottom: 60px;
+    box-shadow: 1px 1px 1px rgba(0,0,0,0.1) ;
+  }
   a {
 
     &:hover {
@@ -28,7 +27,8 @@
   }
 
   h3 {
-    font-size: 35px;
+    font-size: 30px;
+    margin-bottom: 50px;
     letter-spacing: 1px;
   }
 }
