@@ -1,4 +1,6 @@
-<div class="menu-page-container">
+<!-- DESKTOP MENU -->
+
+<div class="menu-page-container hidden-xs">
 
   <div class="category-picker">
 
@@ -93,6 +95,116 @@
 
     <% end %>
 
+  </div>
+
+</div>
+
+
+<!-- MOBILE MENU -->
+<div class="menu-page-container-mobile hidden-sm hidden-md hidden-lg">
+
+  <div class="mobile-nav">
+    <div class="dropdown dropdown-wrapper">
+
+      <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+        <%= params[:category] ||= "Meals" %>
+        <span class="caret"></span>
+      </button>
+
+      <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
+        <li><%= link_to "Meals", menu_pages_path(category: "meals") %></li>
+
+        <li><%= link_to "Burgers", menu_pages_path(category: "burgers") %></li>
+
+        <li><%= link_to "Sandwiches", menu_pages_path(category: "sandwiches") %> </li>
+
+        <li><%= link_to "Pizza", menu_pages_path(category: "pizza") %> </li>
+
+        <li><%= link_to "Sides", menu_pages_path(category: "sides") %></li>
+
+        <li><%= link_to "Drinks", menu_pages_path(category: "drinks") %></li>
+
+      </ul>
+    </div>
+
+    <div class="modal-wrapper">
+      <button type="button" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#myModal">
+        Cart
+        <% if @items_list.count > 0 %>
+          <span class="counter"><%= @items_list.values.pluck(:count).inject(:+) %></span>
+        <% end %>
+      </button>
+
+      <!-- Modal -->
+      <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+        <div class="modal-dialog" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+              <h4 class="modal-title" id="myModalLabel">Ordering List</h4>
+            </div>
+            <div class="modal-body">
+
+
+              <table>
+                <tr>
+                  <td><h6><small>amount&nbsp;&nbsp;</small></h6></td>
+                  <td><h6><small>item&nbsp;&nbsp;</small></h6></td>
+                  <td><h6><small>price</small></h6></td>
+                </tr>
+                <% @items_list.each do |item| %>
+                  <tr>
+                    <td><%= item[1][:count] %>&nbsp;&nbsp;</td>
+                    <td><%= item.first %>&nbsp;&nbsp;</td>
+                    <td><%= item[1][:price].to_f / 100 %>&nbsp;&nbsp;</td>
+                    <td>
+                      <div class="i-tag">
+                        <%= link_to remove_item_path(item_id: item[1][:id], category: params[:category]), method: :post do %>
+                          <i class="fa fa-minus-circle" aria-hidden="true"></i>
+                        <% end %>
+                      </div>
+                    </td>
+                  </tr>
+                <% end %>
+              </table>
+
+
+            </div>
+            <div class="modal-footer">
+              <div class="btn-modal">
+                <button type="button" data-dismiss="modal" class="btn btn-danger">Close</button>
+              </div>
+              <div class="proceed-modal">
+                <%= link_to "Proceed",new_order_path, class:"btn btn-primary" %>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+  </div>
+
+  <div class="menu-items-mobile">
+    <div class="container">
+      <div class="row">
+        <div class="col-xs-12">
+          <% @items.each do |item| %>
+
+            <div class="white-menu-item-wrapper-mob">
+              <%= image_tag item.photo, class: "menu-item-image-mob" %>
+              <h4 class="menu-item-name-mob"><%= item.name %></h4>
+              <h4 class="menu-item-price-mob text-center"><%= item.price.to_f / 100 %> JD </h4>
+              <%= link_to cart_path(item_id: item.id, category: params[:category]), class:"menu-item-cart-mob", method: :post do %>
+                <i class="fa fa-shopping-cart" aria-hidden="true"></i>
+              <% end %>
+            </div>
+
+          <% end %>
+        </div>
+      </div>
+    </div>
   </div>
 
 </div>
