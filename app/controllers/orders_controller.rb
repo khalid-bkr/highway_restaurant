@@ -47,7 +47,11 @@ class OrdersController < ApplicationController
   def add_cart
     session[:items_ids] ||= []
     session[:items_ids] << params[:item_id]
-    redirect_to menu_pages_path(category: params[:category].downcase)
+    if params[:category].present?
+      redirect_to menu_pages_path(category: params[:category].downcase)
+    else
+      redirect_to menu_pages_path(category: "meals")
+    end
   end
 
   def remove_cart
