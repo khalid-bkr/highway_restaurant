@@ -1,6 +1,7 @@
 .contact{
   float:left;
   color:#fff;
+
 }
 .locations {
   float:right;
@@ -8,21 +9,81 @@
 .container-body{
   background-color: #77000D;
 }
-#footer h4{
+#footer h5{
+  margin-top: 30px;
   color: #fff;
 }
 #footer {
   background: #000;
-  margin-top:100px;
-  padding-bottom: 40px;
-}
+  width: 100%;
+  li {
+    a {
+      color: #9F9F9F;
 
-.menu-item a:hover, a:active, a:visited, a:focus {
-  text-decoration: none;
+      &:hover {
+        text-decoration: none;
+        color: #da552f;
+      }
+
+      p {
+        margin-left: 5px;
+      }
+    }
+  }
+
 }
+.list-desktop {
+  li {
+    margin-top: 15px;
+    margin-left: 15px;
+
+
+}
+  }
 
 #map {
   display: flex;
-  height: 200px;
+  height: 150px;
   width: 100%;
+}
+
+.fb-icon {
+  color: #4267b2;
+}
+.insta-icon {
+  color: #d10869;
+}
+.snap-icon {
+  color: #fffc00;
+}
+
+
+.mobile-footer-wrapper{
+  display:flex;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.follow-footer-mobile {
+  flex: 0 1 auto;
+  width: 48%;
+
+  ul > li {
+    padding-right: 10px;
+    padding-right: 10px;
+  }
+}
+
+.contact-footer-mobile {
+  flex: 0 1 auto;
+  width: 48%;
+}
+
+#footer-contact-link {
+  color: white;
+
+  &:hover {
+    color: #da552f;
+    text-decoration: none;
+  }
 }
