@@ -22,3 +22,20 @@
   position: absolute;
   right: 230px;
 }
+
+.address-mob-links{
+  margin-top: 30px;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.address-add-mob {
+  flex: 0 1 auto;
+  width: 48%;
+}
+
+.order-add-mob {
+  flex: 0 1 auto;
+  width: 48%;
+}

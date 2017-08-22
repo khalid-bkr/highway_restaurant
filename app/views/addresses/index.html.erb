@@ -2,7 +2,7 @@
   <div class="container">
     <div class="row">
       <div class="col-md-12">
-        <h2>Address book:</h2>
+        <h3 class="text-center">Address book</h3>
         <div class="wrapper-addresses">
           <table>
             <% @addresses.each_with_index do |address, index| %>
@@ -23,9 +23,26 @@
             </tr>
             <% end %>
           </table>
+
+          <div class="no-addresses text-center">
+            <% if @addresses.count.zero? %>
+              <h4><small>You have no addresses yet !</small></h4>
+              <h5><small>Add an address to place an order</small></h5>
+            <% end %>
+          </div>
         </div>
-          <%= link_to "ADD NEW ADDRESS", new_address_path, class:"address-add btn btn-primary" %>
-          <%= link_to "PLACE ORDER", menu_pages_path, class:"order-add btn btn-primary" %>
+
+        <!-- DESKTOP LINKS -->
+        <div class="hidden-xs">
+          <%= link_to "Add Address", new_address_path, class:"address-add btn btn-primary" %>
+          <%= link_to "New Order", menu_pages_path, class:"order-add btn btn-primary" %>
+        </div>
+
+        <!-- MOBILE LINKS -->
+        <div class="address-mob-links hidden-sm hidden-md hidden-lg">
+          <%= link_to "Add Address", new_address_path, class:"address-add-mob btn btn-primary" %>
+          <%= link_to "New Order", menu_pages_path, class:"order-add-mob btn btn-primary" %>
+        </div>
       </div>
     </div>
   </div>
