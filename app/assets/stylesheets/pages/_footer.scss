@@ -56,7 +56,9 @@
 .snap-icon {
   color: #fffc00;
 }
-
+.mob-icon{
+  font-size: 25px;
+}
 
 .mobile-footer-wrapper{
   display:flex;
@@ -69,8 +71,9 @@
   width: 48%;
 
   ul > li {
+    margin-top: 5px;
     padding-right: 10px;
-    padding-right: 10px;
+    padding-left: 10px;
   }
 }
 
