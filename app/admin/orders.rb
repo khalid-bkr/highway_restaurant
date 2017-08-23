@@ -36,4 +36,18 @@ ActiveAdmin.register Order do
   end
 end
 
+ActiveAdmin.register Order do
+  show do
+    attributes_table do
+      default_attribute_table_rows.each do |field|
+        row field
+      end
+
+      row "items" do |order|
+        order.items.pluck(:name)
+      end
+    end
+  end
+end
+
 end
