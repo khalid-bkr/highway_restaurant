@@ -15,6 +15,11 @@
   }
 }
 
+#myModal {
+  background: transparent;
+  box-shadow: none;
+  width: 95%;
+}
 .modal-wrapper {
   flex: 0 1 auto;
   width: 40%;
@@ -93,8 +98,7 @@
 .proceed-modal {
   flex: 0 1 auto;
   margin-left: 5px;
-
   a {
-    background-color: #26a69a;
+    background-color:  #4CC9B3;
   }
 }
