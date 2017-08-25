@@ -184,6 +184,16 @@
   right:0;
   bottom:0;
   padding: 10px;
+
+  h4 {
+    margin-left: 12px;
+  }
+
+  p {
+    margin-left: 12px;
+    font-size: 15px;
+    word-wrap: break-word;
+  }
 }
 
 .card-hidden:hover {
