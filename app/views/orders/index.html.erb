@@ -6,7 +6,7 @@
   <div class="container">
     <div class="row">
       <div class="col-xs-12 col-md-offset-2 col-md-8">
-        <h1 class="text-center">Your Orders</h1>
+        <h3 class="text-center">Your Orders</h3>
         <div class="orders-index-wrapper">
           <% if @orders.count.zero? || @orders.last.address.nil?%>
             <div class="no-addresses text-center" style="margin-top: 10%">
@@ -41,6 +41,7 @@
             </table>
           <% end %>
         </div>
+        <%= link_to "Menu", menu_pages_path, class: "btn btn-primary hidden-sm hidden-md hidden-lg", style: "width: 100%;" %>
       </div>
     </div>
   </div>

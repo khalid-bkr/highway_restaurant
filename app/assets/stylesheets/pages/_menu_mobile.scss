@@ -13,6 +13,12 @@
   button {
     width: 100%;
   }
+
+  ul {
+    hr {
+      margin: 7px 0;
+    }
+  }
 }
 .modal-backdrop.in {
   height: 100vh;

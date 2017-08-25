@@ -8,12 +8,13 @@ class AddressesController < ApplicationController
 
   def new
     @address = Address.new
+    session[:my_previous_url] = URI(request.referer || '').path
   end
 
   def create
     @address = current_user.addresses.new(address_params)
     if @address.save
-      redirect_to menu_pages_path(category: "meals")
+      redirect_to session[:my_previous_url]
     else
       render 'new'
     end

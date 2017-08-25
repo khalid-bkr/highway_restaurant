@@ -3,7 +3,7 @@
     <div class="row">
       <!-- DESKTOP -->
       <div class="col-sm-3 hidden-xs">
-        <h5>Follow us</h5>
+        <h5><%= link_to "Follow Us", contact_us_pages_path, id: "footer-contact-link" %></h5>
         <ul class="list-unstyled list-desktop">
           <li class="menu-item">
             <%= link_to "https://web.facebook.com/highway.rest.cafe", target: :_blank do %>
@@ -40,7 +40,7 @@
       <!-- MOBILE -->
       <div class="mobile-footer-wrapper hidden-sm hidden-md hidden-lg">
         <div class="follow-footer-mobile">
-          <h5 class="text-center">Follow Us</h5>
+          <h5 class="text-center"><%= link_to "Follow Us", contact_us_pages_path, id: "footer-contact-link" %></h5>
           <ul class="list-inline text-center">
             <li>
               <%= link_to "https://web.facebook.com/highway.rest.cafe", target: :_blank do %>
@@ -73,7 +73,7 @@
       </div>
 
 
-      <div class="col-md-3 col-xs-12 col-md-offset-3">
+      <div class="col-sm-6">
         <!-- <h5>Our locations</h5> -->
         <div id="map"></div>
       </div>
@@ -96,12 +96,12 @@
               {
                 "lat": 32.53487669890565,
                 "lng": 35.860780477523804,
-                "infowindow": "<h1>Highway</h1><p><img src='highway-logo1.jpg'></p>"
+                "infowindow": "<h6><small>Highway 1st</small></h6>"
               },
               {
                 "lat": 32.411958,
                 "lng": 35.94836,
-                "infowindow": "<h1>Highway</h1><p><img src='highway-logo1.jpg'></p>"
+                "infowindow": "<h6><small>Highway 2nd</small></h6>"
               }
             ]);
             handler.bounds.extendWith(markers);
