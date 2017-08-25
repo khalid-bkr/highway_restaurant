@@ -13,7 +13,8 @@
               <% @addresses.each_with_index do |address, index| %>
               <tr>
                 <td width="40%">
-                    <%= "#{(index + 1)} - City: #{address.city}, Area: #{address.area}, Rd: #{address.road_name}, Level: #{address.floor}" %>
+                    <%= "#{(index + 1)} - #{address.city} , #{address.area} , #{address.road_name}"%>
+                    <%=", #{address.floor} floor." if address.floor.present?%>
                 </td>
                 <td width="5%">
                   <%= link_to edit_address_path(address) do %>
