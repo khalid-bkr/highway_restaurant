@@ -15,6 +15,14 @@
   }
 }
 
+.empty-cart-mob {
+  i {
+    margin-top: 10px;
+    font-size: 65px;
+    color: #777777;
+  }
+}
+
 #myModal {
   background: transparent;
   box-shadow: none;
@@ -91,12 +99,16 @@
 
 .btn-modal{
   flex: 0 1 auto;
+  margin-top: 15px;
+  margin-bottom: 15px;
   button {
     background-color: #C83F3F;
   }
 }
 .proceed-modal {
   flex: 0 1 auto;
+  margin-top: 15px;
+  margin-bottom: 15px;
   margin-left: 5px;
   a {
     background-color:  #4CC9B3;
