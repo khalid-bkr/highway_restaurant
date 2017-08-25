@@ -63,28 +63,37 @@
   <div class="cart-part">
 
     <h3 class="text-center">Ordering List</h3>
-
-    <table>
-      <tr>
-        <td><h6><small>amount&nbsp;&nbsp;</small></h6></td>
-        <td><h6><small>item&nbsp;&nbsp;</small></h6></td>
-        <td><h6><small>price</small></h6></td>
-      </tr>
-      <% @items_list.each do |item| %>
+    <% if @items_list.count.zero? %>
+      <div class="text-center cart-empty-des">
+        <h5><small>Cart Is Empty</small></h5>
+        <h5><small>add items by</small></h5>
+        <h5><small> pressing the</small></h5>
+        <h5><small><i class="fa fa-shopping-cart" aria-hidden="true"></i>&nbsp;&nbsp;icon.</small></h5>
+        <h5><small></small></h5>
+      </div>
+    <% else %>
+      <table>
         <tr>
-          <td><%= item[1][:count] %>&nbsp;&nbsp;</td>
-          <td><%= item.first %>&nbsp;&nbsp;</td>
-          <td><%= item[1][:price].to_f / 100 %>&nbsp;&nbsp;</td>
-          <td>
-            <div class="i-tag">
-              <%= link_to remove_item_path(item_id: item[1][:id], category: params[:category]), method: :post do %>
-                <i class="fa fa-minus-circle" aria-hidden="true"></i>
-              <% end %>
-            </div>
-          </td>
+          <td><h6><small>amount&nbsp;&nbsp;</small></h6></td>
+          <td><h6><small>item&nbsp;&nbsp;</small></h6></td>
+          <td><h6><small>price</small></h6></td>
         </tr>
-      <% end %>
-    </table>
+        <% @items_list.each do |item| %>
+          <tr>
+            <td><%= item[1][:count] %>&nbsp;&nbsp;</td>
+            <td><%= item.first %>&nbsp;&nbsp;</td>
+            <td><%= item[1][:price].to_f / 100 %>&nbsp;&nbsp;</td>
+            <td>
+              <div class="i-tag">
+                <%= link_to remove_item_path(item_id: item[1][:id], category: params[:category]), method: :post do %>
+                  <i class="fa fa-minus-circle" aria-hidden="true"></i>
+                <% end %>
+              </div>
+            </td>
+          </tr>
+        <% end %>
+      </table>
+    <% end %>
 
     <br/>
     <% unless session[:items_ids].nil? || session[:items_ids].empty? %>
