@@ -3,6 +3,10 @@
       <%= u.input :phone_number %>
   <% end %>
   <%= f.association :address, collection: current_user.addresses, label_method: :road_name, value_method: :id %>
+  <h5>
+    want to add a new address ?
+    <%= link_to "Click here", new_address_path ,class: "click-here-btn" %>
+  </h5>
   <%= f.input :notes %>
   <%= f.submit class:"btn btn-success submit-order-btn"%>
 <% end %>
