@@ -17,7 +17,7 @@ Rails.application.routes.draw do
 
   resources :pages , only: [] do
     collection do
-      get :home, :menu, :dashboard, :edit_menu, :manager_orders, :contact_us
+      get :home, :menu, :contact_us
     end
   end
 
