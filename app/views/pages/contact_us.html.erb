@@ -37,6 +37,9 @@
           </ul>
         </div>
         <hr>
+        <h3 class="text-center">Our Locations</h3>
+          <div id="map" style="height: 250px;"></div>
+        <hr>
         <h3 class= "text-center">For Suggestions & Bug Reports</h3>
         <p class="text-center" style="margin-top: -30px; margin-bottom: 30px;">Contact Our Programmers</p>
 
@@ -61,7 +64,9 @@
 
         <!-- DESKTOP -->
         <div class="developers hidden-xs">
-          <%= image_tag "asset2.JPG" , class: "avatar-circle responsive-img" %>
+          <div class="dev-img-wrapper">
+            <%= image_tag "asset2.JPG" , class: "avatar-circle responsive-img" %>
+          </div>
           <div class="dev-info">
             <h5 class="dev-name">Mohammad F. Alali</h5>
             <p class="dev-job">FullStack Web Developer</p>
@@ -70,7 +75,9 @@
         </div>
 
         <div class="developers hidden-xs">
-          <%= image_tag "Profile-Placeholder.png" , class: "avatar-circle responsive-img" %>
+          <div class="dev-img-wrapper">
+            <%= image_tag "Profile-Placeholder.png" , class: "avatar-circle responsive-img" %>
+          </div>
           <div class="dev-info">
             <h5 class="dev-name">Khalid A. AbuBaker</h5>
             <p class="dev-job">FullStack Web Developer</p>
