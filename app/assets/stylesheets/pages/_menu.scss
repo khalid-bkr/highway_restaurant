@@ -179,15 +179,14 @@
 
 
 
-.card-hidden {
+#card-hidden {
   opacity: 0;
-  background:rgba(255, 255, 255, 0.9);
+  width: 90%;
+  height: 70%;
   position: absolute;
-  top:0;
-  left:0;
-  right:0;
-  bottom:0;
-  padding: 10px;
+  top: 5%;
+  left: 5%;
+  background:rgba(255, 255, 255, 0.9);
 
   h4 {
     margin-left: 12px;
@@ -198,10 +197,10 @@
     font-size: 15px;
     word-wrap: break-word;
   }
-}
 
-.card-hidden:hover {
-  opacity: 1;
+  &:hover {
+    opacity: 1;
+  }
 }
 
 
