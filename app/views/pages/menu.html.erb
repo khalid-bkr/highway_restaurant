@@ -224,6 +224,10 @@
 
             <div class="white-menu-item-wrapper-mob">
               <%= image_tag item.photo, class: "menu-item-image-mob" %>
+              <div id="mob-card-hidden">
+                <h4><strong><%= item.name %></strong></h4>
+                <p><%= item.description %></p>
+              </div>
               <h4 class="menu-item-name-mob"><%= item.name %></h4>
               <h4 class="menu-item-price-mob text-center"><%= item.price.to_f / 100 %> JD </h4>
               <%= link_to cart_path(item_id: item.id, category: params[:category]), class:"menu-item-cart-mob", method: :post do %>
@@ -238,3 +242,20 @@
   </div>
 
 </div>
+
+<% content_for(:after_js) do %>
+  <script>
+    $(function() {
+      $(document).on("click",function (e) {
+         if (e.target.class=="menu-item-image-mob") {
+           $("#mob-card-hidden").fadeToggle(200);
+           e.stopPropagation();
+           return false;
+         }
+         else if ($("#mob-card-hidden").is(":visible")) {
+           $("#mob-card-hidden").fadeToggle(200);
+         }
+      });
+    });
+  </script>
+<% end %>
