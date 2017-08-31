@@ -36,13 +36,36 @@ ActiveAdmin.register Order do
   end
 end
 
+# ActiveAdmin.register Order do
+#   show do
+#     attributes_table do
+#       default_attribute_table_rows.each do |field|
+#         row field
+#       end
+
+#       row "address" do |order|
+#         order.address.area
+#       end
+
+#       row "items" do |order|
+#         order.items.pluck(:name)
+#       end
+#     end
+#   end
+# end
+
+
 ActiveAdmin.register Order do
   show do
     attributes_table do
-      default_attribute_table_rows.each do |field|
-        row field
+      row :user
+      row "address" do |order|
+        "area: #{order.address.area}, street: #{order.address.road_name}"
       end
-
+      row :notes
+      row :status
+      row :bill
+      row :created_at
       row "items" do |order|
         order.items.pluck(:name)
       end
