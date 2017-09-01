@@ -203,6 +203,30 @@
   }
 }
 
+#mob-card-hidden {
+  opacity: 0;
+  width: 90%;
+  height: 70%;
+  position: absolute;
+  top: 5%;
+  left: 5%;
+  background:rgba(255, 255, 255, 0.9);
+
+  h4 {
+    margin-left: 12px;
+  }
+
+  p {
+    margin-left: 12px;
+    font-size: 15px;
+    word-wrap: break-word;
+  }
+
+  &:hover {
+    opacity: 1;
+  }
+
+}
 
 
 
