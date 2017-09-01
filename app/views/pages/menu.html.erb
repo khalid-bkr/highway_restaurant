@@ -199,12 +199,20 @@
               <hr>
               <button type="button" data-dismiss="modal" class="btn btn-danger">Close</button>
             <% else %>
+              <hr>
+              <h3 class="text-center total-mob">Total   :&nbsp;&nbsp;<span><b><%= @bill.to_f / 100 %> JD</b></span></h3>
+
+
               <div class="modal-footer">
-                <div class="btn-modal">
-                  <button type="button" data-dismiss="modal" class="btn btn-danger">Close</button>
-                </div>
-                <div class="proceed-modal">
-                  <%= link_to "Proceed",new_order_path, class:"btn btn-primary" %>
+                <%= link_to "Proceed", new_order_path(current_user), class: "btn btn-primary proceed-mob" %>
+
+                <div class="btns-mob-modal">
+                  <div class="btn-modal">
+                    <button type="button" data-dismiss="modal" class="btn btn-danger">Close</button>
+                  </div>
+                  <div class="clear-modal">
+                    <%= link_to "Clear", clear_cart_path(category: params[:category]), method: :put, class: "btn btn-primary"   %>
+                  </div>
                 </div>
               </div>
             <% end %>
