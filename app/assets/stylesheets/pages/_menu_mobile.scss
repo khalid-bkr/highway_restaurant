@@ -144,3 +144,53 @@
 .modal-footer{
   height: 100% !important;
 }
+
+// MODAL POPUP FOR MOBILE MENU
+.des-modal {
+  background: transparent !important;
+  box-shadow: none !important;
+  width: 95% !important;
+}
+
+
+.modal-body-des {
+  img {
+    width: 100%;
+    max-height: 200px;
+    margin-top: 20px;
+    border-radius: 15px;
+  }
+
+  h5 {
+    margin-bottom: 20px;
+  }
+
+  p {
+    width: 100%;
+  }
+}
+
+.modal-footer-des {
+  display: flex;
+  justify-content: space-between;
+  vertical-align: center;
+  width: 100%;
+}
+
+.close-footer{
+  flex: 0 1 auto;
+  width: 50%;
+  button {
+    width: 100%;
+    background-color: #C83F3F;
+  }
+}
+
+.add-footer {
+  flex: 0 1 auto;
+  width: 50%;
+  margin-left: 5px;
+  a{
+    width: 100%;
+  }
+}
