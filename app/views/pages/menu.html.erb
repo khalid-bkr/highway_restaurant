@@ -221,9 +221,11 @@
       <div class="row">
         <div class="col-xs-12">
           <% @items.each do |item| %>
-
             <div class="white-menu-item-wrapper-mob">
-              <%= image_tag item.photo, class: "menu-item-image-mob" %>
+              <div data-toggle="modal" data-target="#des-modal-<%= item.id %>">
+                <%= image_tag item.photo, class: "menu-item-image-mob" %>
+              </div>
+
               <h4 class="menu-item-name-mob"><%= item.name %></h4>
               <h4 class="menu-item-price-mob text-center"><%= item.price.to_f / 100 %> JD </h4>
               <%= link_to cart_path(item_id: item.id, category: params[:category]), class:"menu-item-cart-mob", method: :post do %>
@@ -231,10 +233,43 @@
               <% end %>
             </div>
 
+              <div class="modal des-modal fade" id="des-modal-<%= item.id %>" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+                <div class="modal-dialog" role="document">
+                  <div class="modal-content">
+                    <div class="modal-header">
+                      <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                      <h4 class="modal-title text-center" id="myModalLabel"><%= item.name %></h4>
+                    </div>
+                    <div class="modal-body-des">
+                      <%= image_tag item.photo, class: "image-modal" %>
+                      <hr>
+                      <h4><small>Ingredients :</small></h4>
+                      <p>
+                        <%item.description.split("/").each do |des| %>
+                          -&nbsp;&nbsp;<%= des %> <br>
+                        <% end %>
+                      </p>
+                      <hr>
+
+                        <h5 class="text-center">Price   :&nbsp;&nbsp;<span style="color:green;"><b><%= item.price.to_f / 100 %> JD</b></span></h5>
+                      <hr>
+                    </div>
+                    <div class="modal-footer-des">
+                      <div class="close-footer">
+                        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                      </div>
+                      <div class="add-footer">
+                        <%= link_to cart_path(item_id: item.id, category: params[:category]), class:" btn ", method: :post do %>
+                          Add <i class="fa fa-shopping-cart" aria-hidden="true"></i>
+                        <% end %>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
           <% end %>
         </div>
       </div>
     </div>
   </div>
-
 </div>
