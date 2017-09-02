@@ -100,6 +100,7 @@
     <% unless session[:items_ids].nil? || session[:items_ids].empty? %>
       <hr>
       <h3 class="text-center">Total   :&nbsp;&nbsp; <%= @bill.to_f / 100 %> JD</h3>
+      <h6 class="text-center"><small>(*delivery fee not included)</small></h6>
         <div class="menu-btns text-center">
           <% if current_user %>
             <%= link_to "Proceed", new_order_path(current_user), class: "btn-proceed" %>
@@ -203,7 +204,7 @@
               <hr>
               <h3 class="text-center total-mob">Total   :&nbsp;&nbsp;<span><b><%= @bill.to_f / 100 %> JD</b></span></h3>
 
-
+              <h5 class="text-center"><small>(*delivery fee not included)</small></h5>
               <div class="modal-footer">
                 <%= link_to "Proceed", new_order_path(current_user), class: "btn btn-primary proceed-mob" %>
 
