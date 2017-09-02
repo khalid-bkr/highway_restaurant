@@ -45,7 +45,8 @@
             <div class="white-menu-item-wrapper">
               <%= image_tag item.photo, class: "menu-item-image" %>
               <div id="card-hidden">
-                <h4><strong><%= item.name %></strong></h4>
+                <h5><%= item.name %></h5>
+                <hr>
                 <p><%= item.description %></p>
               </div>
               <h4 class="menu-item-name"><%= item.name %></h4>
@@ -233,7 +234,8 @@
             <div class="white-menu-item-wrapper-mob">
               <%= image_tag item.photo, class: "menu-item-image-mob" %>
               <div id="mob-card-hidden">
-                <h4><strong><%= item.name %></strong></h4>
+                <h5><%= item.name %></h5>
+                <hr>
                 <p><%= item.description %></p>
               </div>
               <h4 class="menu-item-name-mob"><%= item.name %></h4>
