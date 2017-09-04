@@ -13,7 +13,7 @@ ActiveAdmin.register User do
 # end
 
 ActiveAdmin.register User do
-  permit_params :first_name, :last_name, :phone_number
+  permit_params :first_name, :last_name
 end
 
 ActiveAdmin.register User do

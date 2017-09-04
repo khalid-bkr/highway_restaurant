@@ -14,7 +14,7 @@ ActiveAdmin.register Order do
 # end
 
 ActiveAdmin.register Order do
-  permit_params :notes, :status, :bill
+  permit_params :notes, :status, :bill, :phone_number
 end
 
 ActiveAdmin.register Order do
@@ -28,9 +28,7 @@ ActiveAdmin.register Order do
     column :notes
     column :status
     column :bill
-    column "phone_number" do |order|
-      order.user.phone_number
-    end
+    column :phone_number
     column :created_at
     actions
   end
@@ -65,6 +63,7 @@ ActiveAdmin.register Order do
       row :notes
       row :status
       row :bill
+      row :phone_number
       row :created_at
       row "items" do |order|
         order.items.pluck(:name)
