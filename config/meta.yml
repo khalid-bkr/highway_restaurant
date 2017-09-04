@@ -2,4 +2,4 @@ meta_product_name: "Highway Restaurant"
 meta_title: "Main | Highway Restaurant"
 meta_description: "Highway Restaurant Irbid,Jordan. Open 24/7 , Serves Breakfast, Lunch, Dinner, Drinks and Coffee."
 meta_image: "twitter-card.jpg"                       # should exist in `app/assets/images/`
-twitter_account: "@product_twitter_account"   # required for Twitter Cards
+twitter_account: "@Highway_rest"   # required for Twitter Cards
