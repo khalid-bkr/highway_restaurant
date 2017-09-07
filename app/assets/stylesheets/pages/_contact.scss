@@ -7,12 +7,12 @@
   border-radius: 5px;
   box-shadow: 2px 2px 2px rgba(0,0,0,0.3);
 
-  ul{
-    li {
-      padding-left: 10px;
-      font-size: 20px;
-    }
-  }
+  // ul{
+  //   li {
+  //     padding-left: 10px;
+  //     font-size: 20px;
+  //   }
+  // }
 
   hr {
     margin-bottom: 60px;
@@ -30,6 +30,16 @@
     font-size: 30px;
     margin-bottom: 50px;
     letter-spacing: 1px;
+  }
+}
+.flex-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  width: 100%;
+  li {
+    flex: 0 1 auto;
+    width: 45%;
   }
 }
 
