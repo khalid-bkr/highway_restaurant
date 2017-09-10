@@ -43,7 +43,7 @@
 .cart-part {
   flex: 0 1 auto;
   height: 100vh;
-  overflow-y: scroll;
+  overflow-y: auto;
   position: sticky !important;
   top: 0 !important;
   width: 20%;
