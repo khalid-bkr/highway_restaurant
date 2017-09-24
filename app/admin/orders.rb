@@ -23,7 +23,7 @@ ActiveAdmin.register Order do
     column :id
     column :user
     column "address" do |order|
-      order.address.area
+      order.address.area if order.address.present?
     end
     column :notes
     column :status
@@ -58,7 +58,7 @@ ActiveAdmin.register Order do
     attributes_table do
       row :user
       row "address" do |order|
-        "area: #{order.address.area}, street: #{order.address.road_name}"
+        "area: #{order.address.area}, street: #{order.address.road_name}" if order.address.present?
       end
       row :notes
       row :status
