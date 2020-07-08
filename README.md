@@ -1,6 +1,3 @@
-# 👇🏻 link 
- [highway-rest.com](https://www.highway-rest.com/)
-
 # 🍕 About  
 A Web App for Highway Restaurants Chain in Jordan, Customers Could Browse Their Menus, Place Orders For Delivery and Check Restaurant's Locations.
 
@@ -14,3 +11,6 @@ A Web App for Highway Restaurants Chain in Jordan, Customers Could Browse Their 
 
 # 🌎 Hosting  
 The Web App is Hosted on Heroku. 
+
+# 👇🏻 link 
+ [highway-rest.com](https://www.highway-rest.com/)
