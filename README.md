@@ -5,6 +5,8 @@ A Web App for Highway Restaurants Chain in Jordan, Customers Could Browse Their 
 - Ruby On Rails
 - Html
 - SCSS
+- Bootstrap
+- Responsive Design
 - JavaScript
 - Google Maps Api
 - PostgreSQL
