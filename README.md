@@ -1,7 +1,7 @@
-# 🍕 About  
+## 🍕 About  
 A Web App for Highway Restaurants Chain in Jordan, Customers Could Browse Their Menus, Place Orders For Delivery and Check Restaurant's Locations.
 
-# 🔥 Technologies  
+## 🔥 Technologies  
 - Ruby On Rails
 - Html
 - SCSS
@@ -11,8 +11,8 @@ A Web App for Highway Restaurants Chain in Jordan, Customers Could Browse Their 
 - Google Maps Api
 - PostgreSQL
 
-# 🌎 Hosting  
+## 🌎 Hosting  
 The Web App is Hosted on Heroku. 
 
-# 👇🏻 link 
+## 👇🏻 link 
  [highway-rest.com](https://www.highway-rest.com/)
