@@ -325,7 +325,7 @@ DEPENDENCIES
   cloudinary
   devise
   figaro
-  font-awesome-sass
+  font-awesome-sass (~> 5.13.0)
   geocoder
   inherited_resources!
   jbuilder (~> 2.0)
