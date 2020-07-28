@@ -11,13 +11,13 @@
 
       <!-- Links when logged in -->
       <%= link_to menu_pages_path, class: "navbar-wagon-item navbar-wagon-link" do %>
-        <i class="fa fa-cutlery" aria-hidden="true"></i> Menu
+        <i class="fas fa-utensils" aria-hidden="true"></i> Menu
       <% end %>
       <%= link_to orders_path, class: "navbar-wagon-item navbar-wagon-link" do %>
         <i class="fa fa-cart-arrow-down" aria-hidden="true"></i> Orders
       <% end %>
       <%= link_to contact_us_pages_path, class: "navbar-wagon-item navbar-wagon-link" do %>
-        <i class="fa fa-phone" aria-hidden="true"></i> Contact Us
+        <i class="fas fa-phone" aria-hidden="true"></i> Contact Us
       <% end %>
       <%= link_to admin_root_path, class: "navbar-wagon-item navbar-wagon-link" do %>
         <i class="fa fa-unlock-alt" aria-hidden="true"></i> Admin
@@ -44,7 +44,7 @@
             </li>
             <li>
               <%= link_to destroy_user_session_path, method: :delete do %>
-                <i class="fa fa-sign-out"></i>  <%= t(".sign_out", default: "Log out") %>
+                <i class="fas fa-sign-out-alt"></i>  <%= t(".sign_out", default: "Log out") %>
               <% end %>
             </li>
           </ul>
@@ -53,13 +53,13 @@
     <% else %>
       <!-- Login link (when logged out) -->
       <%= link_to menu_pages_path, class: "navbar-wagon-item navbar-wagon-link" do %>
-        <i class="fa fa-cutlery" aria-hidden="true"></i> Menu
+        <i class="fas fa-utensils" aria-hidden="true"></i> Menu
       <% end %>
       <%= link_to contact_us_pages_path, class: "navbar-wagon-item navbar-wagon-link" do %>
-        <i class="fa fa-phone" aria-hidden="true"></i> Contact Us
+        <i class="fas fa-phone" aria-hidden="true"></i> Contact Us
       <% end %>
       <%= link_to new_user_session_path, class: "navbar-wagon-item navbar-wagon-link" do %>
-        <i class="fa fa-sign-in"></i> Login
+        <i class="fas fa-sign-in-alt"></i> Login
       <% end %>
     <% end %>
   </div>
@@ -77,7 +77,7 @@
           </li>
           <li>
             <%= link_to menu_pages_path do %>
-              <i class="fa fa-cutlery" aria-hidden="true"></i> Menu
+              <i class="fas fa-utensils" aria-hidden="true"></i> Menu
             <% end %>
           </li>
           <li>
@@ -92,12 +92,12 @@
           </li>
           <li>
             <%= link_to contact_us_pages_path, class: "navbar-wagon-item navbar-wagon-link" do %>
-              <i class="fa fa-phone" aria-hidden="true"></i> Contact Us
+              <i class="fas fa-phone" aria-hidden="true"></i> Contact Us
             <% end %>
           </li>
           <li>
             <%= link_to destroy_user_session_path, method: :delete do %>
-              <i class="fa fa-sign-out"></i>  <%= t(".sign_out", default: "Log out") %>
+              <i class="fas fa-sign-out-alt"></i>  <%= t(".sign_out", default: "Log out") %>
             <% end %>
           </li>
         </ul>
@@ -117,17 +117,17 @@
           </li>
           <li>
             <%= link_to menu_pages_path do %>
-              <i class="fa fa-cutlery" aria-hidden="true"></i> Menu
+              <i class="fas fa-utensils" aria-hidden="true"></i> Menu
             <% end %>
           </li>
           <li>
             <%= link_to contact_us_pages_path, class: "navbar-wagon-item navbar-wagon-link" do %>
-              <i class="fa fa-phone" aria-hidden="true"></i> Contact Us
+              <i class="fas fa-phone" aria-hidden="true"></i> Contact Us
             <% end %>
           </li>
           <li>
             <%= link_to new_user_session_path do %>
-              <i class="fa fa-sign-in"></i> Login
+              <i class="fas fa-sign-in-alt"></i> Login
             <% end %>
           </li>
         </ul>
